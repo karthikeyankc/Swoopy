@@ -24,7 +24,7 @@ for url, user_name, pwd, in login_data:
 	credential[url] = (user_name, pwd[1])
 
 #writing to a text file (CAUTION: Don't leave this text file around!)
-prompt = raw_input("[.] Do you want to write the data to a text file? \n[.] <y> or <n>\n[>] ")
+prompt = raw_input("[.] Are you sure you want to write all this sensitive data to a text file? \n[.] <y> or <n>\n[>] ")
 if prompt == 'y':
 	with open('pwd.txt', 'w') as f:
 		for url, credentials in credential.iteritems():

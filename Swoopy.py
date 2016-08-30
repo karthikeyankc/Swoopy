@@ -29,7 +29,7 @@ if prompt.lower() == 'y':
 	with open('pwd.txt', 'w') as f:
 		for url, credentials in credential.iteritems():
 			if credentials[1]:
-				f.write("\n"+url+"\n"+str(credentials[0]).encode("utf-8")+ " | "+credentials[1]+"\n")
+				f.write("\n"+url+"\n"+str(credentials[0]).encode('utf-8')+ " | "+str(credentials[1]).encode('utf-8')+"\n")
 			else:
 				f.write("\n"+url+"\n"+"USERNAME NOT FOUND | PASSWORD NOT FOUND \n")
 	print "[.] Successfully written to pwd.txt!"
